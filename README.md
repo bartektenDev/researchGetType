@@ -2,7 +2,7 @@
 
 
 **What is it?** This is a project that was only intended for personal research use. Do what you please, it was mean't to help identify
-how getType works in electron and help create the documentation for getType.
+how getType works in electron and help create the documentation for getType in Electron!
 
 **Status**: 
 - [x] Identify when window loads
