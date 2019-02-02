@@ -1,0 +1,29 @@
+{
+  "name": "researchgettype",
+  "version": "1.0.0",
+  "description": "Testing getType in electron for documentation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartektenDev/researchGetType.git"
+  },
+  "keywords": [
+    "electron",
+    "getType",
+    "getType",
+    "getType",
+    "electron"
+  ],
+  "author": "Bart T.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartektenDev/researchGetType/issues"
+  },
+  "homepage": "https://github.com/bartektenDev/researchGetType#readme",
+  "devDependencies": {
+    "electron": "^4.0.3"
+  }
+}
