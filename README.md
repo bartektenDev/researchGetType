@@ -13,16 +13,16 @@ how getType works in electron and help create the documentation for getType in E
 I found out that when I execute this code in main.js:
 
 ```sh
-mainWindow.webContents.on('dom-ready', () => {
-  console.log("DOM: Ready");
-  //verify that if getType is window true, then execute code
-   if (mainWindow.webContents.getType() == "window") {
-     console.log(mainWindow.webContents)
-     //execute javascript
-     mainWindow.webContents.executeJavaScript("var element = document.getEle" +
-     "mentById('changeMe'); element.innerHTML = 'Injected from main.js!';");
-   }
-});
+1     mainWindow.webContents.on('dom-ready', () => {
+2       console.log("DOM: Ready");
+3       //verify that if getType is window true, then execute code
+4        if (mainWindow.webContents.getType() == "window") {
+5          console.log(mainWindow.webContents)
+6          //execute javascript
+7          mainWindow.webContents.executeJavaScript("var element = document.getEle" +
+8          "mentById('changeMe'); element.innerHTML = 'Injected from main.js!';");
+9        }
+10   });
 ```
 
 I am able to find that in the 18th line I can use .getType() for the webContents.
