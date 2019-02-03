@@ -19,7 +19,7 @@ app.on('ready', function(){
   // Create new window
   mainWindow = new BrowserWindow({
     width: 1000,
-    height: 700,
+    height: 800,
     minWidth: 1000,
     minHeight: 600,
     fullscreen: false,
@@ -59,7 +59,6 @@ app.on('ready', function(){
     console.log("DOM: Ready");
     //verify that if getType is window true, then execute code
      if (mainWindow.webContents.getType() == "window") {
-       var test = "string lol";
        console.log(mainWindow.webContents)
        //execute javascript
        mainWindow.webContents.executeJavaScript("var element = document.getElementById('changeMe'); element.innerHTML = 'Injected from main.js!';");
