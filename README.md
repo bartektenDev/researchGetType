@@ -25,7 +25,6 @@ mainWindow.webContents.on('dom-ready', () => {
 });
 ```
 
-
 I am able to find that in the 18th line I can use .getType() for the webContents.
 This returns: window . I was confused at first how this may be getting window as
 the result. I opened my javascript and ajax book to hope that there may be some
