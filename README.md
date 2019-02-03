@@ -12,6 +12,7 @@ how getType works in electron and help create the documentation for getType in E
 **What I found so far**
 I found out that when I execute this code in main.js:
 
+```sh
 mainWindow.webContents.on('dom-ready', () => {
   console.log("DOM: Ready");
   //verify that if getType is window true, then execute code
@@ -21,6 +22,7 @@ mainWindow.webContents.on('dom-ready', () => {
      mainWindow.webContents.executeJavaScript("var element = document.getElementById('changeMe'); element.innerHTML = 'Injected from main.js!';");
    }
 });
+sh```
 
 I am able to find that in the 18th line I can use .getType() for the webContents.
 This returns: window . I was confused at first how this may be getting window as
@@ -33,4 +35,4 @@ my surprise, I found the perfect structure example! (Shown below)
 Currently I've been testing different scripts to try to identify what scripts
 would work in main.js to figure out all possibilities with it. Maybe we can
 use: document.getElementById(elementID) but window has to go first because it
-is the parent of document. Just look at the picture I showed above. 
+is the parent of document. Just look at the picture I showed above.
