@@ -22,7 +22,8 @@ mainWindow.webContents.on('dom-ready', () => {
      mainWindow.webContents.executeJavaScript("var element = document.getElementById('changeMe'); element.innerHTML = 'Injected from main.js!';");
    }
 });
-sh```
+```
+
 
 I am able to find that in the 18th line I can use .getType() for the webContents.
 This returns: window . I was confused at first how this may be getting window as
