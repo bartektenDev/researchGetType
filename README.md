@@ -25,7 +25,7 @@ I found out that when I execute this code in main.js:
 10   });
 ```
 
-I am able to find that in the 18th line I can use .getType() for the webContents.
+I am able to find that in the 4th line I can use .getType() for the webContents.
 This returns: window . I was confused at first how this may be getting window as
 the result. I opened my javascript and ajax book to hope that there may be some
 documentation on the struture of a browser or html tab window. Luckily and to
@@ -37,3 +37,23 @@ Currently I've been testing different scripts to try to identify what scripts
 would work in main.js to figure out all possibilities with it. Maybe we can
 use: document.getElementById(elementID) but window has to go first because it
 is the parent of document. Just look at the picture I showed above.
+
+I believe if I can do something like this (4th line), I could get as deep as using
+.getType() for actual strings, booleans, etc. so that we can see the structure.
+
+```sh
+4        if (mainWindow.webContents.getType() == "window") {
+5             console.log(mainWindow.webContents.getAllWebContents.getType())
+6        }
+```
+
+The following script below allow me to see the data structure of the main.js
+data! Kinda cool! This helps us understand what events are programmed in Electron
+and shows us functions that may help us find out later how we can apply this to
+the .getType() function.
+
+```sh
+4        if (mainWindow.webContents.getType() == "window") {
+5             console.log(webContents.getAllWebContents())
+6        }
+```

@@ -59,7 +59,7 @@ app.on('ready', function(){
     console.log("DOM: Ready");
     //verify that if getType is window true, then execute code
      if (mainWindow.webContents.getType() == "window") {
-       console.log(mainWindow.webContents)
+       console.log(webContents.getAllWebContents())
        //execute javascript
        mainWindow.webContents.executeJavaScript("var element = document.getElementById('changeMe'); element.innerHTML = 'Injected from main.js!';");
      }
