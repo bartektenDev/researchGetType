@@ -19,7 +19,8 @@ mainWindow.webContents.on('dom-ready', () => {
    if (mainWindow.webContents.getType() == "window") {
      console.log(mainWindow.webContents)
      //execute javascript
-     mainWindow.webContents.executeJavaScript("var element = document.getElementById('changeMe'); element.innerHTML = 'Injected from main.js!';");
+     mainWindow.webContents.executeJavaScript("var element = document.getEle" +
+     "mentById('changeMe'); element.innerHTML = 'Injected from main.js!';");
    }
 });
 ```
