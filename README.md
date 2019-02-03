@@ -1,4 +1,4 @@
-# researchGetType
+# researchGetType [Electron]
 
 
 **What is it?** This is a project that was only intended for personal research use. Do what you please, it was mean't to help identify
